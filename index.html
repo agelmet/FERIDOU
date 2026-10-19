@@ -172,6 +172,8 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
         .hero-rot > span:not(.on){opacity:0;transform:translateY(14px)}
         @media (prefers-reduced-motion:reduce){.hero-rot > span{transition:opacity .3s ease}.hero-rot > span:not(.on){transform:none}}
 
+        @media (max-width:767px){#space .space-head{align-items:flex-start}#space .space-head > div:last-child{text-align:left}}
+
         /* Safe Area Utilities for Mobile Menu */
         .safe-pt {
             padding-top: env(safe-area-inset-top);
@@ -467,7 +469,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
     <!-- Space / Quotes Aesthetic Section with Lightbox -->
     <section id="space" class="py-24 bg-brand-primary text-brand-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+            <div class="space-head flex flex-col md:flex-row justify-between items-end mb-16 reveal">
                 <div>
                     <h2 class="font-serif font-semibold text-4xl lg:text-5xl tracking-wide">Ο ΧΩΡΟΣ</h2>
                 </div>

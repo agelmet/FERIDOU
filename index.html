@@ -176,7 +176,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
         /* Round 2 (20 Oct 2026): Βιογραφικό link, detailed CV, EFT links */
         .cv-jump{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;align-self:flex-start;padding:.85rem 1.6rem;border:1px solid #2C3E50;border-radius:999px;color:#2C3E50;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;transition:background-color .3s,color .3s}
         .cv-jump:hover{background:#2C3E50;color:#fff}
-        .cv-sec{background:#F0EFEA;padding:6rem 0}
+        .cv-sec{background:#F0EFEA;display:grid;grid-template-rows:1fr;transition:grid-template-rows .7s cubic-bezier(.65,0,.35,1)}.cv-clip{overflow:hidden;min-height:0}.cv-inner{padding-top:6rem;padding-bottom:5rem}.cv-sec.cv-shut{grid-template-rows:0fr}.cv-sec.cv-shut .cv-clip{visibility:hidden}.cv-jump .cv-ar{display:inline-block;transition:transform .4s}.cv-jump[aria-expanded="true"] .cv-ar{transform:rotate(180deg)}.cv-foot{text-align:center;margin-top:2.5rem}.cv-close{display:inline-flex;gap:.5rem;align-items:center;padding:.8rem 1.5rem;border:1px solid rgba(44,62,80,.35);border-radius:999px;color:#2C3E50;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;background:#fff;transition:background-color .3s,color .3s}.cv-close:hover{background:#2C3E50;color:#fff}@media (prefers-reduced-motion:reduce){.cv-sec{transition:none}}
         .cv-head{text-align:center;margin-bottom:3.5rem}
         .cv-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
         @media (min-width:1024px){.cv-grid{grid-template-columns:1fr 1fr;gap:2rem;align-items:stretch}}
@@ -424,7 +424,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                         </p>
                     </div>
 
-                    <a href="#cv" class="cv-jump">Αναλυτικό βιογραφικό <span aria-hidden="true">↓</span></a>
+                    <button type="button" class="cv-jump" aria-expanded="false" aria-controls="cv"><span class="cv-jl">Αναλυτικό βιογραφικό</span> <span class="cv-ar" aria-hidden="true">↓</span></button>
 
                     <div class="mt-12 flex items-center gap-6">
                          <img src="assets/img/chrysa-feridou-logo.webp" alt="Λογότυπο Χρύσα Φερίδου" class="h-20 w-auto object-contain opacity-40 grayscale">
@@ -436,8 +436,9 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
 
 
     <!-- Detailed CV (her own text, Oct 2026) -->
-    <section id="cv" class="cv-sec">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="cv" class="cv-sec" aria-label="Αναλυτικό βιογραφικό">
+      <div class="cv-clip">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 cv-inner">
             <div class="cv-head reveal">
                 <h2 class="font-serif font-semibold text-4xl lg:text-5xl text-brand-primary tracking-wide">ΑΝΑΛΥΤΙΚΟ ΒΙΟΓΡΑΦΙΚΟ</h2>
             </div>
@@ -506,8 +507,11 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                             <li>Sexual Dysfunctions in Patients diagnosed with Mood Disorders. Onoufriadis N., Ntoumou V., Chousiada C., Feridou C., Kourousias K., Rokkas K., Askitis A. Psychiatriki 20 (Supplement I), 2009. World Congress 2009 of the World Federation for Mental Health.</li>
                 </ul>
             </div>
+            <div class="cv-foot"><button type="button" class="cv-close" aria-controls="cv">Κλείσιμο βιογραφικού <span aria-hidden="true">↑</span></button></div>
         </div>
+      </div>
     </section>
+    <script>if(location.hash!=='#cv')document.getElementById('cv').classList.add('cv-shut');</script>
 
     <!-- Services Section -->
     <section id="services" class="py-24 bg-white relative">
@@ -713,6 +717,27 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
 
     <!-- Scripts -->
     <script>
+        // Αναλυτικό βιογραφικό: opens only when the visitor asks for it
+        (function(){
+            var sec=document.getElementById('cv'), btn=document.querySelector('.cv-jump'), cls=document.querySelector('.cv-close');
+            if(!sec||!btn) return;
+            var lbl=btn.querySelector('.cv-jl');
+            function set(open, scroll){
+                sec.classList.toggle('cv-shut', !open);
+                btn.setAttribute('aria-expanded', open?'true':'false');
+                lbl.textContent = open ? 'Κλείσιμο βιογραφικού' : 'Αναλυτικό βιογραφικό';
+                if(open){
+                    sec.querySelectorAll('.reveal').forEach(function(e){e.classList.add('active')});
+                    if(scroll) setTimeout(function(){window.scrollTo({top:sec.getBoundingClientRect().top+window.pageYOffset-90,behavior:'smooth'})},120);
+                } else if(scroll){
+                    window.scrollTo({top:btn.getBoundingClientRect().top+window.pageYOffset-window.innerHeight/2,behavior:'smooth'});
+                }
+            }
+            btn.addEventListener('click',function(){ set(sec.classList.contains('cv-shut'), true); });
+            if(cls) cls.addEventListener('click',function(){ set(false, true); });
+            if(location.hash==='#cv') set(true, true);
+        })();
+
         // Initialize Icons
         lucide.createIcons();
 

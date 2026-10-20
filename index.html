@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <script id="advon-draft-guard">/* Advon: drafts stay out of Google; the real domain is untouched */(function(h){if(/(^|\.)(drafts\.advonmedia\.com|github\.io|netlify\.app)$/.test(h)){var m=document.createElement("meta");m.name="robots";m.content="noindex,nofollow";document.head.appendChild(m)}})(location.hostname)</script>
+<link rel="canonical" href="https://chrysaferidou.gr/">
+<meta property="og:url" content="https://chrysaferidou.gr/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Ψυχολόγος Νέα Ιωνία | Χρύσα Φερίδου, Θεραπεία Ζεύγους EFT</title>
 <!-- advon-icons · favicon.py · made from ../../sessions/rcw-0158mxusmrkkmzj9p8x79sgu/mnt/ADVON-CLIENTS/_tmp_check/feridou/img/feridou-mark.png · vafa01f8f -->
@@ -17,13 +19,13 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Χρύσα Φερίδου – Ψυχολόγος στη Νέα Ιωνία">
     <meta property="og:description" content="Ατομικές συνεδρίες, Συγκινησιακά Εστιασμένη Θεραπεία Ζεύγους (EFT) και συμβουλευτική γονέων.">
-    <meta property="og:image" content="assets/img/chrysa-feridou-psychologos-portraito.webp">
+    <meta property="og:image" content="https://chrysaferidou.gr/assets/img/chrysa-feridou-psychologos-portraito.webp">
     <meta property="og:locale" content="el_GR">
     <meta name="description" content="Χρύσα Φερίδου, ψυχολόγος στη Νέα Ιωνία. Ατομικές συνεδρίες, Συγκινησιακά Εστιασμένη Θεραπεία Ζεύγους (EFT) και συμβουλευτική γονέων, στην Αγίου Βασιλείου 6.">
     
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[
 {"@type":"MedicalBusiness","@id":"#practice","name":"Χρύσα Φερίδου – Ψυχολόγος","alternateName":"Chrysa Feridou – Psychologist","telephone":"+306932729649","address":{"@type":"PostalAddress","streetAddress":"Αγίου Βασιλείου 6","postalCode":"142 31","addressLocality":"Νέα Ιωνία","addressRegion":"Αττική","addressCountry":"GR"},"areaServed":"Νέα Ιωνία","founder":{"@id":"#person"},"knowsAbout":["Ατομική ψυχοθεραπεία","Συγκινησιακά Εστιασμένη Θεραπεία Ζεύγους (EFT)","Συγκινησιακά Εστιασμένη Ατομική Θεραπεία (EFIT)","Συμβουλευτική γονέων"],"sameAs":["https://www.linkedin.com/in/chrysa-feridou-57503758/"]},
-{"@type":"Person","@id":"#person","name":"Χρύσα Φερίδου","alternateName":"Chrysa Feridou","jobTitle":"Ψυχολόγος","image":"assets/img/chrysa-feridou-psychologos-portraito.webp","hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"Άδεια ασκήσεως επαγγέλματος ψυχολόγου"},"worksFor":{"@id":"#practice"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"City University of London"},{"@type":"CollegeOrUniversity","name":"University of Greenwich"}],"sameAs":["https://www.linkedin.com/in/chrysa-feridou-57503758/"]},
+{"@type":"Person","@id":"#person","name":"Χρύσα Φερίδου","alternateName":"Chrysa Feridou","jobTitle":"Ψυχολόγος","image":"https://chrysaferidou.gr/assets/img/chrysa-feridou-psychologos-portraito.webp","hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"Άδεια ασκήσεως επαγγέλματος ψυχολόγου"},"worksFor":{"@id":"#practice"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"City University of London"},{"@type":"CollegeOrUniversity","name":"University of Greenwich"}],"sameAs":["https://www.linkedin.com/in/chrysa-feridou-57503758/"]},
 {"@type":"WebSite","name":"Χρύσα Φερίδου – Ψυχολόγος","alternateName":["Chrysa Feridou Psychologist"]}
 ]}</script>
     <!-- Tailwind CSS -->
@@ -167,12 +169,34 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
         }
 
         /* Hero rotating line (round 1, Oct 2026) */
-        .hero-rot{display:grid}
-        .hero-rot > span{grid-area:1/1;text-wrap:balance;transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
-        .hero-rot > span:not(.on){opacity:0;transform:translateY(14px)}
-        @media (prefers-reduced-motion:reduce){.hero-rot > span{transition:opacity .3s ease}.hero-rot > span:not(.on){transform:none}}
+        .hero-hello{font-family:'Manrope',sans-serif;font-weight:300;font-size:clamp(1.85rem,1.1rem + 2.6vw,3.25rem);line-height:1.2;letter-spacing:-.01em;text-wrap:balance}
 
         @media (max-width:767px){#space .space-head{align-items:flex-start}#space .space-head > div:last-child{text-align:left}}
+
+        /* Round 2 (20 Oct 2026): Βιογραφικό link, detailed CV, EFT links */
+        .cv-jump{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;align-self:flex-start;padding:.85rem 1.6rem;border:1px solid #2C3E50;border-radius:999px;color:#2C3E50;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;transition:background-color .3s,color .3s}
+        .cv-jump:hover{background:#2C3E50;color:#fff}
+        .cv-sec{background:#F0EFEA;padding:6rem 0}
+        .cv-head{text-align:center;margin-bottom:3.5rem}
+        .cv-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+        @media (min-width:1024px){.cv-grid{grid-template-columns:1fr 1fr;gap:2rem;align-items:stretch}}
+        .cv-col{display:flex;flex-direction:column;gap:1.5rem}
+        .cv-block{background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 1px 2px rgba(44,62,80,.04),0 12px 32px -18px rgba(44,62,80,.18)}
+        .cv-col > .cv-block:only-child{flex:1}
+        .cv-block h3{font-family:'EB Garamond',serif;font-weight:600;font-size:1.5rem;color:#2C3E50;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(141,163,153,.45)}
+        .cv-block ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem}
+        .cv-block li{position:relative;padding-left:1.15rem;font-size:.97rem;line-height:1.6;color:rgba(44,62,80,.82);font-weight:300}
+        .cv-block li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:#8DA399}
+        .cv-pubs{margin-top:1.5rem}
+        .cv-pubs li{font-size:.9rem;overflow-wrap:anywhere}
+        .refs{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:3rem}
+        @media (min-width:768px){.refs{grid-template-columns:1fr 1fr;max-width:52rem;margin-left:auto;margin-right:auto}}
+        .ref-card{position:relative;display:flex;flex-direction:column;gap:.35rem;padding:1.4rem 3rem 1.4rem 1.5rem;background:#fff;border:1px solid rgba(44,62,80,.08);border-radius:1rem;color:#2C3E50;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
+        .ref-name{font-family:'EB Garamond',serif;font-weight:600;font-size:1.35rem;line-height:1.1}
+        .ref-sub{font-size:.82rem;line-height:1.45;color:rgba(44,62,80,.7);font-weight:300}
+        .ref-go{position:absolute;right:1.25rem;top:1.25rem;color:#8DA399;font-size:1.1rem}
+        @media (hover:hover){.ref-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -16px rgba(44,62,80,.3)}}
+        @media (prefers-reduced-motion:reduce){.ref-card,.cv-jump{transition:none}}
 
         /* Safe Area Utilities for Mobile Menu */
         .safe-pt {
@@ -235,7 +259,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                     </div>
                     
                     <!-- CTA -->
-                    <a href="tel:6932729649" data-book class="relative overflow-hidden group bg-brand-primary text-white px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-brand-secondary/20">
+                    <a href="https://calendar.app.google/f6zd3bdP1vx4mYsE9" target="_blank" rel="noopener" data-book class="relative overflow-hidden group bg-brand-primary text-white px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-brand-secondary/20">
                         <span class="relative z-10 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                             ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                         </span>
@@ -267,7 +291,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                 <div class="flex gap-6 mt-8">
                     <a href="https://www.linkedin.com/in/chrysa-feridou-57503758/?originalSubdomain=gr" target="_blank" rel="noopener" class="text-brand-primary" aria-label="LinkedIn"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
                 </div>
-                <a href="tel:6932729649" data-book class="mt-4 bg-brand-primary text-white px-8 py-4 rounded-full uppercase tracking-widest text-sm">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+                <a href="https://calendar.app.google/f6zd3bdP1vx4mYsE9" target="_blank" rel="noopener" data-book class="mt-4 bg-brand-primary text-white px-8 py-4 rounded-full uppercase tracking-widest text-sm">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
             </nav>
         </div>
     </nav>
@@ -291,10 +315,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                     <span class="w-2 h-2 rounded-full bg-brand-secondary animate-pulse"></span>
                     Χρύσα Φερίδου · Ψυχολόγος · Νέα Ιωνία
                 </h1>
-                <p class="hero-rot font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] text-brand-primary mb-10 max-w-xl" aria-live="off">
-                    <span class="on">Καλώς ήρθατε στην ιστοσελίδα μου</span>
-                    <span class="italic" aria-hidden="true">Συγκινησιακά Εστιασμένη Θεραπεία</span>
-                </p>
+                <p class="hero-hello text-brand-primary mb-10 max-w-xl">Καλώς ήρθατε στην ιστοσελίδα μου</p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#services" class="px-8 py-4 bg-white/50 backdrop-blur-sm border border-brand-primary text-brand-primary rounded-full uppercase tracking-widest text-sm hover:bg-brand-primary hover:text-white transition-colors duration-300 text-center">
                         ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
@@ -389,15 +410,11 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                 <div class="w-full lg:w-1/2 reveal delay-200 pl-0 lg:pl-12 flex flex-col justify-center">
                     <h2 class="text-xs font-bold tracking-[0.2em] text-brand-secondary uppercase mb-6 flex items-center gap-3">
                         <span class="w-8 h-[1px] bg-brand-secondary"></span>
-                        ΤΟ ΠΡΟΦΙΛ ΜΟΥ
+                        ΒΙΟΓΡΑΦΙΚΟ
                     </h2>
-                    <p class="font-serif text-3xl lg:text-4xl text-brand-primary mb-8 leading-[1.2]">
-                        Είμαι η <span class="italic text-brand-primary">Χρύσα Φερίδου</span> και είμαι ψυχολόγος με άδεια ασκήσεως επαγγέλματος.
-                    </p>
-
                     <div class="space-y-6 text-brand-primary/80 font-light text-lg leading-relaxed">
                         <p>
-                            Διατηρώ το ιδιωτικό μου γραφείο στη Νέα Ιωνία και στόχος μου είναι να προσφέρω τις υπηρεσίες μου σε έναν χώρο ασφάλειας και αποδοχής. Κατέχω μεταπτυχιακό τίτλο σπουδών στη <strong class="text-brand-primary font-medium">Συμβουλευτική Ψυχολογία από το City University του Λονδίνου</strong>.
+                            Είμαι η Χρύσα Φερίδου και είμαι ψυχολόγος με άδεια ασκήσεως επαγγέλματος. Διατηρώ το ιδιωτικό μου γραφείο στη Νέα Ιωνία και στόχος μου είναι να προσφέρω τις υπηρεσίες μου σε έναν χώρο ασφάλειας και αποδοχής. Κατέχω μεταπτυχιακό τίτλο σπουδών στη <strong class="text-brand-primary font-medium">Συμβουλευτική Ψυχολογία από το City University του Λονδίνου</strong>.
                         </p>
                         <p>
                             Από το 2009 εργάζομαι ιδιωτικά, ενώ έχω συνεργαστεί με ψυχιατρικές κλινικές, δομές απεξάρτησης, κέντρα αποκατάστασης και εκπαιδευτικά ιδρύματα. Παράλληλα, έχω συμμετάσχει σε διεθνείς ερευνητικές δημοσιεύσεις και προγράμματα σχετικά με την ψυχολογική υποστήριξη και την ποιότητα ζωής ασθενών με χρόνια αποφρακτική πνευμονοπάθεια.
@@ -407,10 +424,87 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                         </p>
                     </div>
 
+                    <a href="#cv" class="cv-jump">Αναλυτικό βιογραφικό <span aria-hidden="true">↓</span></a>
+
                     <div class="mt-12 flex items-center gap-6">
                          <img src="assets/img/chrysa-feridou-logo.webp" alt="Λογότυπο Χρύσα Φερίδου" class="h-20 w-auto object-contain opacity-40 grayscale">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Detailed CV (her own text, Oct 2026) -->
+    <section id="cv" class="cv-sec">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="cv-head reveal">
+                <h2 class="font-serif font-semibold text-4xl lg:text-5xl text-brand-primary tracking-wide">ΑΝΑΛΥΤΙΚΟ ΒΙΟΓΡΑΦΙΚΟ</h2>
+            </div>
+            <div class="cv-grid">
+                <div class="cv-col reveal">
+                    <div class="cv-block">
+                        <h3>Σπουδές</h3>
+                        <ul>
+                            <li>Ελληνικό Δίκτυο για την Συγκινησιακά Εστιασμένη Θεραπεία (EFT Greek Network), Εκπαίδευση στην Συγκινησιακά Εστιασμένη Θεραπεία Ζεύγους</li>
+                            <li>Ελληνικό Δίκτυο για την Συγκινησιακά Εστιασμένη Θεραπεία (EFT Greek Network), Εκπαίδευση στην Συγκινησιακά Εστιασμένη Ατομική Θεραπεία</li>
+                            <li>Ελληνική Εταιρεία Συστημικής Σκέψης και Ψυχοθεραπείας Οικογένειας, Μετεκπαιδευτικό Σεμινάριο: Συστημική Θεωρία και Πράξη</li>
+                            <li>ΕΠΙΨΥ, Μετεκπαιδευτικό Σεμινάριο στην Κλινική Ψυχοπαθολογία «Παναγιώτης Ουλής»</li>
+                            <li>Post Graduate Diploma, City University, Λονδίνο, Counselling Psychology</li>
+                            <li>BSc Hons, University of Greenwich, Λονδίνο, Πτυχίο Ψυχολογίας (BSc Hons)</li>
+                        </ul>
+                    </div>
+                    <div class="cv-block">
+                        <h3>Πρακτική άσκηση</h3>
+                        <ul>
+                            <li>Εκπαιδευόμενη συμβουλευτική ψυχολόγος, Barnet Drugs and Alcohol Service, Colindale Hospital, Λονδίνο</li>
+                            <li>Εκπαιδευόμενη συμβουλευτική ψυχολόγος, Ιατρικό Κέντρο Gladstone - NHS Trust, Λονδίνο</li>
+                            <li>Εκπαιδευόμενη συμβουλευτική ψυχολόγος, Kids Company – Δημοτικό Σχολείο St Peter’s, Λονδίνο</li>
+                        </ul>
+                    </div>
+                    <div class="cv-block">
+                        <h3>Εθελοντική εργασία</h3>
+                        <ul>
+                            <li>Συμβουλευτική γονέων, παιδιών και εφήβων, «Μαζί για το Παιδί» Συμβουλευτική Γραμμή 11525</li>
+                            <li>Συμβουλευτική εφήβων, Ο.Κ.Α.Ν.Α. Μονάδα Εφήβων «Ατραπός»</li>
+                            <li>Ψυχολογική υποστήριξη ατόμων με ψύχωση, Σύλλογος Οικογενειών για την Ψυχική Υγεία (Σ.Ο.Ψ.Υ.) Κέντρο Ημέρας Βύρωνα</li>
+                        </ul>
+                    </div>
+                    <div class="cv-block">
+                        <h3>Ξένες γλώσσες</h3>
+                        <ul>
+                            <li>Αγγλικά</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cv-col reveal delay-100">
+                    <div class="cv-block">
+                        <h3>Επαγγελματική εμπειρία</h3>
+                        <ul>
+                            <li>Άσκηση επαγγέλματος ψυχολόγου, Ιδιωτικό γραφείο (2009 - Σήμερα)</li>
+                            <li>Πιλοτικό πρόγραμμα πνευμονικής αποκατάστασης στον Δήμο Περιστερίου, Συμβουλευτική ασθενών με ΧΑΠ, Ελληνική Πνευμονολογική Εταιρεία</li>
+                            <li>Ψυχολογική υποστήριξη ανθρώπινου δυναμικού, HELLAS EAP, εξωτερικός συνεργάτης (2019 - Σήμερα)</li>
+                            <li>Συμβουλευτική γονέων, Κέντρο Ειδικών Θεραπειών, Αγωγή και Μάθηση</li>
+                            <li>Αξιολόγηση και παρακολούθηση των ψυχοσυναισθηματικών αναγκών του προσφυγικού πληθυσμού, ΕΟΔΥ &amp; International Organization of Migration</li>
+                            <li>Ψυχοεκπαίδευση και συμβουλευτική ατόμων με ειδικές ανάγκες, ΚΕΑ ΑΜΕΑ, Κέντρο Επαγγελματικής Αποκατάστασης ΑΜΕΑ</li>
+                            <li>Διδασκαλία μαθημάτων Ψυχολογίας / Συμβουλευτικής και Ψυχοθεραπείας (MSc, BSc, HND, APC), Mediterranean College, Αθήνα</li>
+                            <li>Ψυχολόγος - Ψυχιατρικό Τμήμα, Τμήμα Απεξάρτησης, Ψυχογηριατρικό Τμήμα, Ψυχιατρική Κλινική «Λυράκου»</li>
+                            <li>Εισήγηση Σεμιναρίου: Διαχείριση Διαπροσωπικών Σχέσεων, Ίδρυμα Νεολαίας και Δια Βίου Μάθησης, Κέντρο Δια Βίου Μάθησης Δήμου Ελευσίνας</li>
+                            <li>Συμμετοχή σε ευρωπαϊκά ερευνητικά προγράμματα σχετικά με την ποιότητα ζωής των ασθενών με Χ.Α.Π. Σε συνεργασία με τα νοσοκομεία ΕΥΑΓΓΕΛΙΣΜΟΣ, ΣΩΤΗΡΙΑ και το κέντρο αποκατάστασης ΦΙΛΟΚΤΗΤΗΣ, ΙΔΡΥΜΑ «ΘΩΡΑΞ»</li>
+                            <li>Αντιμετώπιση ψυχοσεξουαλικών προβλημάτων, Συμμετοχή στην γραμμή σεξουαλικής υγείας, ΙΝΣΤΙΤΟΥΤΟ ΨΥΧΙΚΗΣ ΚΑΙ ΣΕΞΟΥΑΛΙΚΗΣ ΥΓΕΙΑΣ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-block cv-pubs reveal">
+                <h3>Δημοσιεύσεις</h3>
+                <ul>
+                            <li>Effectiveness of home tele-rehabilitation on functional capacity and daily physical activity in COPD patients. Maroula Vasilopoulou, Andriana I. Papaioannou, Nikolaos Chynkiamis, Theodora Vasilogiannakopoulou, Stavroula Spetsioti, Zafeiris Louvaris, Eleni Kortianou, Otilia Kocsis, Athanasios Tsopanoglou, Chrysoula Feridou, Eustathia Plataniti, Alexia Thomopoulou, Georgios Kaltsakas, Nikolaos G. Koulouris, Ioannis Vogiatzis. European Respiratory Journal Sep 2015, 46 (suppl 59) OA273; DOI: 1183/13993003. congress 2015. OA 273.</li>
+                            <li>Evidence of benefit from home tele-rehabilitation on chronic dyspnea and quality of life in patients with COPD. Maroula Vasilopoulou, Andriana I. Papaioannou, Georgios Kaltsakas, Sofianna A. Gennimata, Anastasios F. Palamidas, Chrysoula Feridou, Nikolaos Chynkiamis, Theodora Vasilogiannakopoulou, Stavroula Spetsioti, Zafeiris Louvaris, Otilia Kocsis, Stylianos Pantelopoulos, Nikolaos G. Koulouris, Ioannis Vogiatzis. European Respiratory Journal Sep 2015, 46 (suppl 59) PA3721; DOI: 10.1183/13993003. congress-2015. PA 3721.</li>
+                            <li>The PROactive innovative conceptual framework on physical activity. Dobbels F., Drost E., Elberse J., Feridou C., De Jong C., Jacobs L., Frei A., Puhan M., De Boer W., Van der Molen T., Williams K., Pinnock H., Troosters T., Karlsson N., Kulich K., Rüdell K. (July 2014). European Respiratory Journal. pii. Erj0048-2014.</li>
+                            <li>Dobbels F., Drost E., Elberse J., Feridou C., De Jong C., Jacobs L., Frei A., Puhan M., De Boer W., Van der Molen T., Williams K., Pinnock H., Troosters T., Karlsson N., Kulich K., Rüdell K., on behalf of the PROactive consortium. A New Model to Understand the Concept Physical Activity for Patients with COPD. ERS Congress 2011.</li>
+                            <li>Sexual Dysfunctions in Patients diagnosed with Mood Disorders. Onoufriadis N., Ntoumou V., Chousiada C., Feridou C., Kourousias K., Rokkas K., Askitis A. Psychiatriki 20 (Supplement I), 2009. World Congress 2009 of the World Federation for Mental Health.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -518,8 +612,8 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
     <section class="py-20 bg-brand-secondary/20 relative">
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
             <div class="flex justify-center">
-                <a href="tel:6932729649" data-book class="bg-brand-primary text-white px-10 py-5 rounded-full uppercase tracking-widest text-sm shadow-xl hover:bg-brand-secondary transition-all transform hover:-translate-y-1">
-                    ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
+                <a href="https://calendar.app.google/f6zd3bdP1vx4mYsE9" target="_blank" rel="noopener" data-book class="bg-brand-primary text-white px-10 py-5 rounded-full uppercase tracking-widest text-sm shadow-xl hover:bg-brand-secondary transition-all transform hover:-translate-y-1">
+                    ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ ONLINE
                 </a>
             </div>
         </div>
@@ -559,6 +653,10 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
                             <i data-lucide="phone" class="w-5 h-5 text-brand-secondary"></i>
                             <a href="tel:6932729649" class="hover:text-brand-secondary transition-colors">693 272 9649</a>
                         </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="calendar-check" class="w-5 h-5 text-brand-secondary"></i>
+                            <a href="https://calendar.app.google/f6zd3bdP1vx4mYsE9" target="_blank" rel="noopener" class="hover:text-brand-secondary transition-colors underline decoration-brand-secondary/50 underline-offset-4">Κλείστε ραντεβού online</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -583,6 +681,19 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
 
             </div>
 
+            <div class="refs reveal">
+                <a class="ref-card" href="https://iceeft.com/" target="_blank" rel="noopener">
+                    <span class="ref-name">ICEEFT</span>
+                    <span class="ref-sub" lang="en">International Centre for Excellence in Emotionally Focused Therapy</span>
+                    <span class="ref-go" aria-hidden="true">↗</span>
+                </a>
+                <a class="ref-card" href="https://eft.net.gr/" target="_blank" rel="noopener">
+                    <span class="ref-name">EFT Greek Network</span>
+                    <span class="ref-sub">Ελληνικό Δίκτυο για τη Συγκινησιακά Εστιασμένη Θεραπεία</span>
+                    <span class="ref-go" aria-hidden="true">↗</span>
+                </a>
+            </div>
+
             <div class="border-t border-brand-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-primary/50 uppercase tracking-widest">
                 <p>&copy; 2026 ΧΡΥΣΑ ΦΕΡΙΔΟΥ. ALL RIGHTS RESERVED.</p>
                 <p class="mt-2 md:mt-0">
@@ -602,17 +713,6 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
 
     <!-- Scripts -->
     <script>
-        // Hero: «Καλώς ήρθατε…» ⇄ «Συγκινησιακά Εστιασμένη Θεραπεία»
-        (function(){
-            var s=document.querySelectorAll('.hero-rot > span'); if(s.length<2) return; var i=0;
-            setInterval(function(){
-                if(document.hidden) return;
-                s[i].classList.remove('on'); s[i].setAttribute('aria-hidden','true');
-                i=(i+1)%s.length;
-                s[i].classList.add('on'); s[i].removeAttribute('aria-hidden');
-            },4200);
-        })();
-
         // Initialize Icons
         lucide.createIcons();
 

@@ -191,7 +191,7 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
         .cv-pubs li{font-size:.9rem;overflow-wrap:anywhere}
         .refs{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:3rem}
         @media (min-width:768px){.refs{grid-template-columns:1fr 1fr;max-width:52rem;margin-left:auto;margin-right:auto}}
-        .ref-card{position:relative;display:flex;flex-direction:column;gap:.35rem;padding:1.4rem 3rem 1.4rem 1.5rem;background:#fff;border:1px solid rgba(44,62,80,.08);border-radius:1rem;color:#2C3E50;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
+        .ref-logo{display:flex;align-items:center;justify-content:center;height:84px;margin-bottom:.6rem}.ref-logo img{max-height:84px;max-width:220px;width:auto;height:auto;object-fit:contain}.ref-card .ref-sub{text-align:center}.ref-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:.35rem;padding:1.6rem 2.5rem 1.4rem;background:#fff;border:1px solid rgba(44,62,80,.08);border-radius:1rem;color:#2C3E50;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
         .ref-name{font-family:'EB Garamond',serif;font-weight:600;font-size:1.35rem;line-height:1.1}
         .ref-sub{font-size:.82rem;line-height:1.45;color:rgba(44,62,80,.7);font-weight:300}
         .ref-go{position:absolute;right:1.25rem;top:1.25rem;color:#8DA399;font-size:1.1rem}
@@ -686,13 +686,13 @@ h1,h2,h3,h4,h5{overflow-wrap:anywhere}
             </div>
 
             <div class="refs reveal">
-                <a class="ref-card" href="https://iceeft.com/" target="_blank" rel="noopener">
-                    <span class="ref-name">ICEEFT</span>
+                <a class="ref-card" href="https://iceeft.com/" target="_blank" rel="noopener" aria-label="ICEEFT – International Centre for Excellence in Emotionally Focused Therapy">
+                    <span class="ref-logo"><img src="assets/img/iceeft-logo.webp" width="520" height="231" alt="Λογότυπο ICEEFT" loading="lazy" decoding="async"></span>
                     <span class="ref-sub" lang="en">International Centre for Excellence in Emotionally Focused Therapy</span>
                     <span class="ref-go" aria-hidden="true">↗</span>
                 </a>
-                <a class="ref-card" href="https://eft.net.gr/" target="_blank" rel="noopener">
-                    <span class="ref-name">EFT Greek Network</span>
+                <a class="ref-card" href="https://eft.net.gr/" target="_blank" rel="noopener" aria-label="EFT Greek Network – Ελληνικό Δίκτυο για τη Συγκινησιακά Εστιασμένη Θεραπεία">
+                    <span class="ref-logo"><img src="assets/img/eft-greek-network-logo.webp" width="218" height="176" alt="Λογότυπο EFT Greek Network" loading="lazy" decoding="async"></span>
                     <span class="ref-sub">Ελληνικό Δίκτυο για τη Συγκινησιακά Εστιασμένη Θεραπεία</span>
                     <span class="ref-go" aria-hidden="true">↗</span>
                 </a>
